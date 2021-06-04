@@ -1,0 +1,54 @@
+@import "./color-palette.scss";
+
+@mixin display_flex(
+  $direction,
+  $justify_content: center,
+  $align_items: center,
+  $flex_wrap: none,
+  $align_content: center
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify_content;
+  align-items: $align_items;
+  @if $flex_wrap != none {
+    flex-wrap: $flex_wrap;
+    align-content: $align_content;
+  }
+}
+
+@mixin click_feedback() {
+  position: relative;
+  outline: none !important;
+  @keyframes effect {
+    50% {
+      transform: scale(5, 5);
+      opacity: 0;
+    }
+    99% {
+      transform: scale(0.001, 0.001);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(0.001, 0.001);
+      opacity: 1;
+    }
+  }
+
+  &:after {
+    content: "";
+    background-color: $divider;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale(0.001, 0.001);
+  }
+
+  &:active:after {
+    animation: effect 0.8s ease-out;
+  }
+}

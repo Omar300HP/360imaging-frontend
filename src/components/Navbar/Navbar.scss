@@ -1,0 +1,24 @@
+@import "../../styles/templates.scss";
+
+.navbar {
+  width: 100%;
+  height: 10%;
+  padding: 1rem 5rem 1rem 2rem;
+  background-color: $navbar;
+  @include display_flex(row, space-between, center);
+
+  .logo {
+    height: 100%;
+    width: auto;
+  }
+
+  i {
+    cursor: pointer;
+    color: $icons;
+    font-weight: bold;
+    font-size: 2rem;
+    @include click_feedback;
+    &:hover {
+    }
+  }
+}
