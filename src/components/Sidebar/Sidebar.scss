@@ -1,0 +1,21 @@
+@import "../../styles/templates.scss";
+
+.sidebar {
+  flex: 1 0 0%;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 800ms;
+  background-color: $light_primary;
+
+  &.side-collapse-enter-active,
+  &.side-collapse-exit-done {
+    width: 0%;
+    flex: 1 0 0%;
+  }
+  &.side-collapse-enter-done,
+  &.side-collapse-exit-active {
+    width: 15%;
+    flex: 1 0 15%;
+  }
+}

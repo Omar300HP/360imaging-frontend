@@ -1,4 +1,4 @@
-@import "./color-palette.scss";
+@import "./templates.scss";
 
 body {
   margin: 0;
@@ -15,4 +15,17 @@ body {
   left: 0;
   right: 0;
   box-sizing: border-box;
+  @include display_flex(column, space-between);
+}
+
+.content {
+  width: 100%;
+  flex: 0 1 100%;
+  @include display_flex(row, space-between);
+  transition: all 800ms;
+}
+
+.main-content {
+  flex: 0 1 100%;
+  height: 100%;
 }
