@@ -7,7 +7,7 @@ function Routes(props) {
   return (
     <main className="main-content">
       <Switch>
-        <Route component={BlogPage} path="/" exact />
+        <Route component={BlogPage} path="/" name exact />
       </Switch>
     </main>
   );

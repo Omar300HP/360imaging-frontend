@@ -1,0 +1,29 @@
+@import "../../../../styles/templates.scss";
+
+form.newblog {
+  h3 {
+    font-family: "Acumin Bold";
+    color: $dark_primary;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $secondary;
+  }
+  .group-container {
+    width: 100%;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $secondary;
+    .textarea-container {
+      width: 100%;
+      .no-label {
+        display: none;
+      }
+      .textarea-noborder {
+        width: 100%;
+        border: none !important;
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
