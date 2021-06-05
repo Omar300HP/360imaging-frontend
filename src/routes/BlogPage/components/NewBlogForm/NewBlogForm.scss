@@ -1,6 +1,7 @@
 @import "../../../../styles/templates.scss";
 
 form.newblog {
+  @include display_flex(column, flex-start, flex-start);
   h3 {
     font-family: "Acumin Bold";
     color: $dark_primary;
@@ -25,5 +26,9 @@ form.newblog {
         box-shadow: none !important;
       }
     }
+  }
+  .form-ctrl {
+    width: 100%;
+    @include display_flex(row, flex-end, center);
   }
 }
