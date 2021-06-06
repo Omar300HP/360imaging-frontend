@@ -1,13 +1,14 @@
-import useCollection from "../../../../custom-hooks/useCollection";
+import { usePostsContext } from "../../postsContext";
 import { Post } from "../Post";
 
 function PostsList(props) {
-  const posts = useCollection({ path: "get_posts" }).state.docs;
+  const { actualPosts } = usePostsContext();
+
   return (
     <div className="posts-list">
-      {posts?.length > 0 &&
-        posts.map((post, index) => {
-          return <Post key={index} postData={post} />;
+      {actualPosts?.length > 0 &&
+        actualPosts.map((post, index) => {
+          return <Post key={index} postData={{ ...post, id: index }} />;
         })}
     </div>
   );

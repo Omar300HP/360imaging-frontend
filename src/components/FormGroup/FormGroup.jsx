@@ -32,12 +32,17 @@ export default function FormGroup(props) {
                 ? input.value
                 : objectValues && objectValues[input.name]
             }
-            // onChange={(e) =>
-            //   handleChange(
-            //     input.name,
-            //     e?.target?.value ? e.target.value : e.value
-            //   )
-            // }
+            onChange={(e) =>
+              input.handleChange
+                ? input.handleChange(
+                    e?.target?.value ? e.target.value : e.value
+                  )
+                : handleChange &&
+                  handleChange(
+                    input.name,
+                    e?.target?.value ? e.target.value : e.value
+                  )
+            }
           />
         );
       })}

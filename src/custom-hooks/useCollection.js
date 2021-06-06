@@ -11,7 +11,7 @@
 
 import { useReducer, useEffect } from "react";
 
-import { instance } from "../api/rest";
+// import { instance } from "../api/rest";
 import { apiCall } from "../api/mockServer/server";
 
 export default function useCollection({

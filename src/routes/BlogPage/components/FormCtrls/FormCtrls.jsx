@@ -1,10 +1,21 @@
 import { Buttons } from "../../../../components/Buttons";
 import renderStaticText from "../../../../locale";
+import { useFormContext } from "../NewBlogForm/formContext";
 
 function FormCtrls(props) {
+  const { formHandler } = useFormContext();
+
   return (
     <div className="form-ctrl">
-      <Buttons buttontype="secondary" classNames="submit" type="button">
+      <Buttons
+        buttontype="secondary"
+        classNames="submit"
+        type="button"
+        onClick={(e) => {
+          e.preventDefault();
+          formHandler.resetForm();
+        }}
+      >
         <i className="pi pi-refresh" /> <span>{renderStaticText("reset")}</span>
       </Buttons>
       <Buttons buttontype="primary" classNames="submit" type="submit">
