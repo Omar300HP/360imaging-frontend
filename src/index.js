@@ -13,7 +13,7 @@ import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
 
 const history = createBrowserHistory({
-  basename: "/360-imaging",
+  basename: "",
 });
 
 ReactDOM.render(

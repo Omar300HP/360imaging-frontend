@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
 import "./BlogPage.scss";
-import { NewBlog } from "./components";
+import { NewBlog, PostsList } from "./components";
 
 function BlogPage(props) {
   return (
     <div className="blog-page">
       <NewBlog />
+      <PostsList />
     </div>
   );
 }

@@ -3,4 +3,7 @@ export const english_locale = {
   whats_up: "What's up ?",
   post: "POST",
   reset: "RESET",
+  comments: "Comments",
+  comment: "COMMENT",
+  write_comment: "Write a comment...",
 };

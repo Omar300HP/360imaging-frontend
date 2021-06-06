@@ -1,17 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Buttons } from "../../../../components/Buttons";
-import { Galleria } from "primereact/galleria";
+
+import { ImagesPreview } from "../ImagesPreview";
 
 function ImageUpload(props) {
-  const itemTemplate = (item) => {
-    return <img src={item} className="image-full" />;
-  };
-
-  const thumbnailTemplate = (item) => {
-    return <img src={item} className="image-thumb" />;
-  };
-
   return (
     <div className="image-upload">
       <Buttons
@@ -21,13 +14,7 @@ function ImageUpload(props) {
       >
         <i className="pi pi-image" />
       </Buttons>
-      {[].length > 0 && (
-        <Galleria
-          value={[]}
-          item={itemTemplate}
-          thumbnail={thumbnailTemplate}
-        />
-      )}
+      <ImagesPreview images={[]} />
     </div>
   );
 }
