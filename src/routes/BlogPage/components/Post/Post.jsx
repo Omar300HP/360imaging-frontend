@@ -1,4 +1,3 @@
-import { Galleria } from "primereact/galleria";
 import PropTypes from "prop-types";
 import renderStaticText from "../../../../locale";
 import { CommentForm } from "../CommentForm";

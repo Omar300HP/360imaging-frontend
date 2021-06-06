@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { Route, Switch, useLocation } from "react-router-dom";
 
 import { BlogPage } from "./BlogPage";
@@ -12,7 +11,5 @@ function Routes(props) {
     </main>
   );
 }
-
-Routes.propTypes = {};
 
 export default Routes;

@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { Buttons } from "../../../../components/Buttons";
 import { FormGroup } from "../../../../components/FormGroup";
 import renderStaticText from "../../../../locale";
@@ -29,7 +28,5 @@ function CommentForm(props) {
     </form>
   );
 }
-
-CommentForm.propTypes = {};
 
 export default CommentForm;

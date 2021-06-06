@@ -1,5 +1,3 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { Buttons } from "../../../../components/Buttons";
 import renderStaticText from "../../../../locale";
 
@@ -15,7 +13,5 @@ function FormCtrls(props) {
     </div>
   );
 }
-
-FormCtrls.propTypes = {};
 
 export default FormCtrls;

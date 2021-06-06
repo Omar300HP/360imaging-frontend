@@ -1,5 +1,3 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { Buttons } from "../../../../components/Buttons";
 
 import { ImagesPreview } from "../ImagesPreview";
@@ -18,7 +16,5 @@ function ImageUpload(props) {
     </div>
   );
 }
-
-ImageUpload.propTypes = {};
 
 export default ImageUpload;

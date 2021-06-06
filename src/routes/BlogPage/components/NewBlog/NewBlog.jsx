@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { NewBlogForm } from "../NewBlogForm";
 
 function NewBlog(props) {
@@ -8,7 +7,5 @@ function NewBlog(props) {
     </section>
   );
 }
-
-NewBlog.propTypes = {};
 
 export default NewBlog;

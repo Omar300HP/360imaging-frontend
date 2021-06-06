@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { FormGroup } from "../../../../components/FormGroup";
 import renderStaticText from "../../../../locale";
 import { FormCtrls } from "../FormCtrls";
@@ -34,7 +33,5 @@ function NewBlogForm(props) {
     </form>
   );
 }
-
-NewBlogForm.propTypes = {};
 
 export default NewBlogForm;
