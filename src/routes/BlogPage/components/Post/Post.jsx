@@ -12,6 +12,7 @@ function Post(props) {
   const { deletePost, updatePost } = usePostsContext();
 
   const [isEditable, setIsEditable] = useState(false);
+  const [isCommentEditable, setIsCommentEditable] = useState(null);
   const [post, setPost] = useState(postData);
 
   const uploadImageRef = useRef(null);
@@ -20,6 +21,7 @@ function Post(props) {
     if (postData) {
       setPost(postData);
       setIsEditable(false);
+      setIsCommentEditable(null);
     }
   }, [postData]);
 
@@ -101,6 +103,7 @@ function Post(props) {
                 URL.createObjectURL(e.target.files[0]),
               ];
               setPost(tempPost);
+              uploadImageRef.current.value = "";
             }}
           />
           <i className="pi pi-image" />
@@ -113,12 +116,58 @@ function Post(props) {
         post.comments.map((comment, index) => {
           return (
             <div className="comment-wrapper" key={index}>
-              <h5 className="poster">{comment.user}</h5>
-              <p className="post-content">{comment.textContent}</p>
+              <div className="first-row">
+                <h5 className="poster">{comment.user}</h5>
+                {comment.user === "Actual User" && (
+                  <div className="ctrls">
+                    <Buttons
+                      buttontype="secondary"
+                      classNames="submit"
+                      type="button"
+                      onClick={(e) => {
+                        let comments = [...post.comments];
+                        comments.splice(index, 1);
+                        updatePost(postData.id, {
+                          ...post,
+                          comments,
+                        });
+                      }}
+                    >
+                      <i className="pi pi-refresh" />
+                      <span>delete</span>
+                    </Buttons>
+                    <Buttons
+                      buttontype="primary"
+                      classNames="submit"
+                      type="button"
+                      onClick={() => {
+                        console.log(isCommentEditable);
+                        setIsCommentEditable(
+                          isCommentEditable === null && isCommentEditable !== 0
+                            ? index
+                            : null
+                        );
+                      }}
+                    >
+                      <i className="pi pi-pencil" />
+                      <span>Edit comment</span>
+                    </Buttons>
+                  </div>
+                )}
+              </div>
+              {isCommentEditable === index ? (
+                <CommentForm
+                  post={post}
+                  editIndex={index}
+                  Initialcomment={comment.textContent}
+                />
+              ) : (
+                <p className="post-content">{comment.textContent}</p>
+              )}
             </div>
           );
         })}
-      <CommentForm />
+      <CommentForm post={post} />
     </section>
   );
 }

@@ -25,6 +25,7 @@ function ImageUpload(props) {
               "images",
               URL.createObjectURL(e.target.files[0])
             );
+            uploadImageRef.current.value = "";
           }}
         />
         <i className="pi pi-image" />

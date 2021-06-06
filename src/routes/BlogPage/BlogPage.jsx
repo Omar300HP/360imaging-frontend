@@ -15,7 +15,7 @@ function BlogPage(props) {
   }, [posts]);
 
   const addNewPost = (newPost) => {
-    setActualPosts([...actualPosts, newPost]);
+    setActualPosts([newPost, ...actualPosts]);
   };
 
   const deletePost = (id) => {
