@@ -1,0 +1,6 @@
+applications:
+  - name: 360assignment
+path: build/
+buildpack: staticfile_buildpack
+routes:
+  - route: 360assignment.eu-gb.cf.appdomain.cloud
