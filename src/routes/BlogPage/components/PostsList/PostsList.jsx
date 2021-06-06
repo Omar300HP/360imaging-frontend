@@ -1,7 +1,8 @@
+import useCollection from "../../../../custom-hooks/useCollection";
 import { Post } from "../Post";
 
 function PostsList(props) {
-  const { posts } = props;
+  const posts = useCollection({ path: "get_posts" }).state.docs;
   return (
     <div className="posts-list">
       {posts?.length > 0 &&

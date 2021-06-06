@@ -4,9 +4,6 @@ import { NewBlog, PostsList } from "./components";
 import { apiCall } from "../../api/mockServer/server";
 
 function BlogPage(props) {
-  useEffect(() => {
-    apiCall("get_posts");
-  }, []);
   return (
     <div className="blog-page">
       <NewBlog />
