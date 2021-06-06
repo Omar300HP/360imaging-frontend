@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import "./BlogPage.scss";
-import { NewBlog } from "./NewBlog";
+import { NewBlog } from "./components";
 
 function BlogPage(props) {
   return (

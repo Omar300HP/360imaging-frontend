@@ -1,8 +1,8 @@
-import "./NewBlogForm.scss";
 import PropTypes from "prop-types";
 import { FormGroup } from "../../../../components/FormGroup";
 import renderStaticText from "../../../../locale";
-import { Buttons } from "../../../../components/Buttons";
+import { FormCtrls } from "../FormCtrls";
+import { ImageUpload } from "../ImageUpload";
 
 function NewBlogForm(props) {
   const formGroup1 = [
@@ -29,15 +29,8 @@ function NewBlogForm(props) {
     >
       <h3>{renderStaticText("create_blog")}</h3>
       <FormGroup className={"group-container"} inputs={formGroup1} />
-      <div className="form-ctrl">
-        <Buttons buttontype="secondary" classNames="submit" type="button">
-          <i className="pi pi-refresh" />{" "}
-          <span>{renderStaticText("reset")}</span>
-        </Buttons>
-        <Buttons buttontype="primary" classNames="submit" type="submit">
-          <i className="pi pi-pencil" /> <span>{renderStaticText("post")}</span>
-        </Buttons>
-      </div>
+      <ImageUpload />
+      <FormCtrls />
     </form>
   );
 }

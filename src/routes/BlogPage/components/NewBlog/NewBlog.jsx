@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
-import renderStaticText from "../../../locale";
-import "./NewBlog.scss";
-import { NewBlogForm } from "../components";
+import { NewBlogForm } from "../NewBlogForm";
 
 function NewBlog(props) {
   return (

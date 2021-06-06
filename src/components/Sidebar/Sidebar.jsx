@@ -8,12 +8,8 @@ function Sidebar(props) {
     <CSSTransition in={isSideBarOpen} timeout={600} classNames="side-collapse">
       <nav className={`sidebar ${isSideBarOpen ? "open" : ""}`}>
         <ul>
-          <li>
-            <a href="#">Menu Option 1</a>
-          </li>
-          <li>
-            <a href="#">Menu Option 2</a>
-          </li>
+          <li>Menu Option 1</li>
+          <li>Menu Option 2</li>
         </ul>
       </nav>
     </CSSTransition>

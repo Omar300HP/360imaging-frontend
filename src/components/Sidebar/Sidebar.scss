@@ -20,4 +20,19 @@
     width: 15%;
     flex: 1 0 15%;
   }
+
+  ul {
+    list-style: none;
+    width: 15vw;
+    li {
+      font-family: "Montserrat Semi Bold";
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  }
+  ul li::before {
+    content: "📌";
+    display: inline-block;
+    margin-right: 0.2rem;
+  }
 }

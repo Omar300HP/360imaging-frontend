@@ -1,1 +1,1 @@
-export { NewBlogForm } from "./NewBlogForm";
+export { NewBlog } from "./NewBlog";
